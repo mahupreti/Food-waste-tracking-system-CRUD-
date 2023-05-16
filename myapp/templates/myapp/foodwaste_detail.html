@@ -1,0 +1,11 @@
+{% extends 'myapp/navbar.html' %}  
+{% block content %}
+
+
+  <h2>{{ foodwaste.food.name }}</h2>
+  <p>Amount wasted: {{ foodwaste.amount }} kg</p>
+  <p>Date recorded: {{ foodwaste.date_recorded }}</p>
+
+{% endblock content %}
+
+

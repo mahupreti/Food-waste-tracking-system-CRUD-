@@ -1,0 +1,18 @@
+
+{% extends 'myapp/navbar.html' %}  
+{% block content %}
+{% for foodwaste in foodwastes %}
+  <h2>{{ foodwaste.food.name }}</h2>
+  <p>Amount wasted: {{ foodwaste.amount }} kg</p>
+  <p>Date recorded: {{ foodwaste.date_recorded }}</p>
+  <a href="{% url 'foodwaste_update' foodwaste.pk %}">Edit</a>
+  <a href="{% url 'foodwaste_detail' foodwaste.pk %}">Details</a>
+{% endfor %}
+<a href="{% url 'foodwaste_create' %}">Record Food Waste</a>
+
+{% endblock content %}
+  
+
+
+
+  

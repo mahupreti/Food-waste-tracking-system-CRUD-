@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Waste Tracking System</title>
+   
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'food_list' %}">Food List</a></li>
+            <li><a href="{% url 'food_create' %}">Create Food</a></li>
+            <li><a href="{% url 'foodwaste_list' %}">Food Waste List</a></li>
+            <li><a href="{% url 'foodwaste_create' %}">Record Food Waste</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

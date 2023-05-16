@@ -1,0 +1,14 @@
+
+{% extends 'myapp/navbar.html' %}  
+{% block content %}
+<br>
+<form method="POST" action="{% url 'food_create' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Create Food</button>
+</form>
+
+{% endblock content %}
+  
+
+
